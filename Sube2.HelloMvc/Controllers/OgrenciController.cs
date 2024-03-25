@@ -10,7 +10,7 @@ namespace Sube2.HelloMvc.Controllers
             return View();
         }
 
-        public string OgrenciDetay(int id)
+        public ViewResult OgrenciDetay(int id)
         {
             Ogrenci ogr = null;
             if (id == 1)
@@ -24,7 +24,7 @@ namespace Sube2.HelloMvc.Controllers
             {
                 ogr = new Ogrenci { Ad = "Ahmet", Soyad = "Mehmet", Numara = 456 };
             }
-            return ogr.ToString();
+            return View();
         }
     }
 }
