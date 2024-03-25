@@ -7,6 +7,8 @@ namespace Sube2.HelloMvc.Controllers
     {
         public ViewResult Index()//Action
         {
+            
+
             return View();
         }
 
@@ -24,7 +26,16 @@ namespace Sube2.HelloMvc.Controllers
             {
                 ogr = new Ogrenci { Ad = "Ahmet", Soyad = "Mehmet", Numara = 456 };
             }
+            ViewData["ogrenci"] = ogr;
+            ViewBag.student = ogr;
             return View();
         }
     }
 }
+
+//Controller->View veri taşıma
+//ViewData:Bir koleksiyon yapısıdır. ViewData bir dictionary yapısıdır. Anahtar ve değer çiftlerinden oluşur.
+
+//ViewBag: Arka planda ViewData koleksiyonunu kullanan,dynamic yapıda bir veri taşıma yapısıdır.
+
+//ViewModel

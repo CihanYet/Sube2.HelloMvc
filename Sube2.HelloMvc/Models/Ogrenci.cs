@@ -6,9 +6,9 @@
         public string Soyad { get; set; }
         public int Numara { get; set; }
 
-        public override string ToString()
-        {
-            return $"Ad:{this.Ad}-Soyad:{Soyad}-Numara:{Numara}";
-        }
+        //public override string ToString()
+        //{
+        //    return $"Ad:{this.Ad}-Soyad:{Soyad}-Numara:{Numara}";
+        //}
     }
 }
