@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Sube2.HelloMvc.Models;
+using Sube2.HelloMvc.Models.ViewModels;
 
 namespace Sube2.HelloMvc.Controllers
 {
@@ -7,13 +8,17 @@ namespace Sube2.HelloMvc.Controllers
     {
         public ViewResult Index()//Action
         {
-            
+
 
             return View();
         }
 
         public ViewResult OgrenciDetay(int id)
         {
+            var d = new Ders { Dersad = "Matematik", Dersid = 1, Kredi = 3 };
+            var ogrt = new Ogretmen { Ad = "Ahmet", Soyad = "Mehmet", Bolum = "Bilgisayar" };
+
+
             Ogrenci ogr = null;
             if (id == 1)
             {
@@ -28,7 +33,20 @@ namespace Sube2.HelloMvc.Controllers
             }
             ViewData["ogrenci"] = ogr;
             ViewBag.student = ogr;
-            return View();
+
+            var ogrvm = new OgrViewModel { Ders = d, Ogretmen = ogrt, Ogrenci = ogr };
+
+            return View(ogrvm);
+        }
+
+        public ViewResult OgrenciListe()
+        {
+            var lst = new List<Ogrenci> {
+            new Ogrenci { Ad = "Ali", Soyad = "Veli", Numara = 123 },
+            new Ogrenci { Ad = "Ahmet", Soyad = "Mehmet", Numara = 456 }
+            };
+
+            return View(lst);
         }
     }
 }
