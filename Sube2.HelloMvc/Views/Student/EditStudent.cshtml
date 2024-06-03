@@ -1,17 +1,19 @@
 ﻿@model Ogrenci
 @{
-    ViewData["Title"] = "AddStudent";
+    ViewData["Title"] = "EditStudent";
 }
 
-<h1>Öğrenci Ekleme İşlemi</h1>
+<h1>Edit Student</h1>
 
-
-<form asp-action="AddStudent" asp-controller="Student" method="post">
+<form asp-action="EditStudent" asp-controller="Student" method="post">
     <label asp-for="Ad"></label>
     <input asp-for="Ad" />
     <label>Soyad:</label>
     <input asp-for="Soyad" />
     <label>Numara</label>
     <input asp-for="Numara" />
+    <input asp-for="Ogrenciid" type="hidden" />
     <input type="submit" value="Kaydet" />
 </form>
+
+
