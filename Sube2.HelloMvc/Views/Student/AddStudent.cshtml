@@ -1,0 +1,17 @@
+﻿@model Ogrenci
+@{
+    ViewData["Title"] = "AddStudent";
+}
+
+<h1>Öğrenci Ekleme İşlemi</h1>
+
+
+<form action="/Student/AddStudent" method="post">
+    <label>Ad:</label>
+    <input type="text" id="Ad" name="Ad" />
+    <label>Soyad:</label>
+    <input asp-for="Soyad" />
+    <label>Numara</label>
+    <input asp-for="Numara" />
+    <input type="submit" value="Kaydet" />
+</form>

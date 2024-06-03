@@ -31,7 +31,7 @@
             //using (var ctx = new OkulDbContext())
             //{
             //    var ogr = ctx.Ogrenciler.Find(1);
-            //    if (ogr!=null)
+            //    if (ogr != null)
             //    {
             //        ctx.Ogrenciler.Remove(ogr);
             //        ctx.SaveChanges();
